@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expo React Native Demo</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #fff;
+        }
+        .container {
+            text-align: center;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+        }
+        .title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .input {
+            width: 100%;
+            height: 40px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 0 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        .button {
+            background-color: #007AFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .button:hover {
+            background-color: #0051D5;
+        }
+        .button:active {
+            background-color: #004499;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Expo React Native App</div>
+        <input
+            type="text"
+            class="input"
+            id="textInput"
+            placeholder="Nhập nội dung..."
+        />
+        <button class="button" onclick="showMessage()">
+            Hiển thị thông báo
+        </button>
+    </div>
+
+    <script>
+        function showMessage() {
+            const text = document.getElementById('textInput').value;
+            const message = text || 'Bạn chưa nhập nội dung!';
+            alert('Thông báo\n\n' + message);
+        }
+    </script>
+</body>
+</html>
